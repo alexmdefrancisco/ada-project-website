@@ -672,6 +672,4 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>Expecting investors to consistently identify crises in advance using noisy and ambiguous signals is unrealistic.</p>
   <p>In conclusion, investors are not drunk—they are navigating an inherently complex system where patterns exist but clarity does not.</p>
   <p>Markets may whisper before they crash, but they rarely shout.</p>
-  <p>TEAM</p>
-  <p>Nicolò Baldovin, Demetrio F. Cardile, Alex Martinez, Tommaso Mencattini, Letizia Seveso.</p>
 </div>
