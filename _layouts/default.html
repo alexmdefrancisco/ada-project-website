@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+  <body>
+
+    {% include header.html %}
+
+    <div class="main-content-wrapper">
+      <div class="wrapper">
+        <main class="page-content" aria-label="Content">
+          {{ content }}
+        </main>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    {% include footer.html %}
+
+  </body>
+</html>
