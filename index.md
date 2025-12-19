@@ -179,7 +179,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>And even among returns, we tend to favor log returns, partly because they’re mathematically convenient, and partly because they behave more politely in statistical models.</p>
 
   <div class="chart-container" data-aos="zoom-in">
-      <img src="assets/images/meme_mr_mrs_return.png" alt="Mr. & Mrs. Return in Therapy">
+      <img src="assets/images/meme_raw_prices_returns.png" alt="Raw Prices vs Returns Meme">
   </div>
 
   <p>To illustrate the contrast, we can look at returns from both viewpoints — simple and logarithmic — for a single stock and a single ETF.</p>
@@ -195,7 +195,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>This makes log returns particularly suitable for statistical analysis.</p>
 
   <div class="chart-container" data-aos="zoom-in">
-      <img src="assets/images/meme_volatility_clusters.png" alt="Volatility Clusters Meme">
+      <img src="assets/images/meme_mr_mrs_return.png" alt="Mr. & Mrs. Return in Therapy">
   </div>
 
   <p>Second, both AAPL and SPY clearly exhibit <strong>volatility clustering</strong>: periods of calm with small fluctuations are followed by periods of intense turbulence, especially around major crises.</p>
@@ -203,6 +203,11 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>Volatility clustering is one of the recurring characters of financial markets — like that one actor who appears in every Christopher Nolan film.</p>
   <p>It’s everywhere, and once you see it, you start noticing it all the time.</p>
   <p>We’ll explore this idea in depth later, but for now, it’s enough to appreciate that markets don’t just bounce around randomly — they have periods of tranquillity and periods of chaos, and they tend to stick together in clusters.</p>
+
+  <div class="chart-container" data-aos="zoom-in">
+      <img src="assets/images/meme_volatility_clusters.png" alt="Volatility Clusters Meme">
+  </div>
+
   <p>Returning to our discussion of returns versus log returns, there is another reason log returns are preferred: they often look more “normal” — statistically speaking, not emotionally.</p>
   <p>To demonstrate this, we turn to a tool called a <strong>QQ plot</strong>, which checks whether data follows a normal distribution.</p>
   <p>It’s like holding up your dataset to a mirror and asking, “Do you look normal today?”</p>
