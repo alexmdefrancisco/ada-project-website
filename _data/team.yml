@@ -1,0 +1,30 @@
+# _data/team.yml
+- name: "Nicolò Baldovin"
+  photo: "/assets/images/nicolo.png"
+  profession: "Financial Engineer"
+  link: "https://linkedin.com/in/alexmartinezdefrancisco"
+  description: ""
+
+- name: "Demetrio F. Cardile"
+  photo: "/assets/images/demetrio.jpeg"
+  profession: "Financial Engineer"
+  link: "https://linkedin.com/in/alexmartinezdefrancisco"
+  description: ""
+
+- name: "Alex Martínez"
+  photo: "/assets/images/alex.jpg"
+  profession: "Financial Engineer"
+  link: "https://linkedin.com/in/alexmartinezdefrancisco"
+  description: "Crafting beautiful and responsive user interfaces. Javascript enthusiast and CSS wizard."
+
+- name: "Tommaso Mencattini"
+  photo: "/assets/images/tommaso.jpeg"
+  profession: "Data Scientist"
+  link: "https://linkedin.com/in/alexmartinezdefrancisco"
+  description: ""
+
+- name: "Letizia Seveso"
+  photo: "/assets/images/tommaso.jpeg"
+  profession: "Financial Engineer"
+  link: "https://linkedin.com/in/letizia-seveso-234553205"
+  description: "Specializes in predictive modeling and machine learning pipelines. Passionate about turning raw data into actionable insights."

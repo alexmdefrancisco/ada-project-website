@@ -1,0 +1,51 @@
+<div class="team-carousel-wrapper" id="teamCarousel">
+  
+  <div class="carousel-top-section">
+    <button class="arrow-btn prev-btn" aria-label="Previous">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M15 18L9 12L15 6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="people-images-container">
+      {% for person in site.data.team %}
+      <div 
+        class="person-bubble {% if forloop.first %}active{% endif %}" 
+        data-index="{{ forloop.index0 }}"
+        style="background-image: url('{{ person.photo | relative_url }}');">
+      </div>
+      {% endfor %}
+    </div>
+
+    <button class="arrow-btn next-btn" aria-label="Next">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M9 6L15 12L9 18" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="carousel-text-window">
+    <div class="carousel-text-track">
+      {% for person in site.data.team %}
+      <div class="person-info-card">
+        <h3>
+          <a href="{{ person.link }}" target="_blank" rel="noopener noreferrer">
+            {{ person.name }}
+          </a>
+        </h3>
+        <div class="profession">{{ person.profession }}</div>
+        
+        <div class="description-box">
+          <div class="description-text">
+            {{ person.description }}
+          </div>
+          <div class="testimonial-quote-mark"></div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+<script src="{{ '/assets/js/team_carousel.js' | relative_url }}"></script>

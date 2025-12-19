@@ -170,3 +170,174 @@
     margin: 4rem 0;
   }
 }
+
+/* assets/css/team_carousel.scss */
+.team-carousel-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  --primary-red: #dc3545;
+  --bubble-size: 80px; /* Base size for inactive bubbles */
+  --active-scale: 1.8; /* How much bigger the active bubble is */
+}
+
+/* --- Top Section: Images & Arrows --- */
+.carousel-top-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--primary-red);
+  width: 50px;
+  height: 50px;
+  transition: transform 0.2s ease;
+  z-index: 20;
+  
+  &:hover {
+    transform: scale(1.15);
+  }
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.people-images-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 160px; /* Tall enough for the expanded active bubble */
+  padding: 0 20px;
+}
+
+.person-bubble {
+  width: var(--bubble-size);
+  height: var(--bubble-size);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  border: 2px solid #ddd;
+  filter: grayscale(100%);
+  margin-left: -25px; /* The overlap effect */
+  position: relative;
+  z-index: 1;
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  /* The Active State */
+  &.active {
+    width: calc(var(--bubble-size) * var(--active-scale));
+    height: calc(var(--bubble-size) * var(--active-scale));
+    border: 4px solid var(--primary-red);
+    filter: none;
+    z-index: 10;
+    margin-left: 10px; /* Give the active one some breathing room */
+    margin-right: 10px;
+  }
+}
+
+/* --- Bottom Section: Sliding Text --- */
+.carousel-text-window {
+  width: 100%;
+  overflow: hidden; /* Masks the sliding track */
+  position: relative;
+  /* Crucial: ensures border and padding are included in width */
+  box-sizing: border-box; 
+  * {
+    box-sizing: border-box;
+  }
+}
+
+.carousel-text-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+  width: 100%; 
+  will-change: transform; /* Performance optimization */
+}
+
+.person-info-card {
+  /* Use flex-basis to ensure it is EXACTLY the width of the parent */
+  flex: 0 0 100%;
+  max-width: 100%; 
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  
+  /* Prevent any accidental collapsing */
+  width: 100%; 
+
+  h3 {
+    margin-bottom: 0.5rem;
+    a {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #212529;
+      text-decoration: none;
+      &:hover { text-decoration: underline; }
+    }
+  }
+
+  .profession {
+    font-size: 1.2rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.description-box {
+  background-color: #f8f9fa;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  width: 100%;
+  max-width: 800px; /* Aligns description width with common reading standards */
+  min-height: 200px;
+  position: relative;
+  margin-top: 1rem;
+  margin-left: auto; /* Centers the box */
+  margin-right: auto;
+}
+
+.description-text {
+  text-align: left;
+  line-height: 1.8rem;
+  font-size: 1rem;
+  color: #212529;
+  position: relative;
+  z-index: 2;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.testimonial-quote-mark {
+  position: absolute;
+  top: -1rem;
+  right: 0rem;
+  width: 4rem;
+  height: 4rem;
+  /* Inline SVG for the quote mark from your code */
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300"><path d="m175.6 204.73 22.19 46.49C258.61 223.15 278 189.49 278 151.18V48.78H175.6v102.4h51.2c0 15.64-12.42 35.66-51.2 53.55zm-153.6 0 22.19 46.49c60.83-28.07 80.21-61.73 80.21-100.04V48.78H22v102.4h51.2c0 15.64-12.42 35.66-51.2 53.55z" fill="%23dc3545"></path></svg>');
+  background-size: contain;
+  background-repeat: no-repeat;
+  z-index: 1;
+}

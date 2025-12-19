@@ -1,18 +1,13 @@
 ---
 layout: page
-title: About
+title: About Us
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+### The Project
+This project, **The Big Shot**, explores financial market behaviors before major crises. Inspired by *The Big Short*, we analyze correlations, volatility, and industry dynamics to see if warning signs are visible before a crash occurs.
 
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
+---
 
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+### Meet the Team
+{% include team_carousel.html %}
