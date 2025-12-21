@@ -367,15 +367,9 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>To address RQ1, our strategy is to look beyond individual price movements and focus on how assets behave <strong>together</strong>. Financial crises are rarely driven by isolated events; they emerge when markets become increasingly interconnected. For this reason, we study correlations rather than levels, and we do so for features that capture complementary dimensions of market behavior.</p>
   <p>Log returns reflect <strong>price co-movements</strong>, revealing whether assets start moving in sync as stress builds up. Volatility captures <strong>shared uncertainty</strong>, highlighting moments when risk rises simultaneously across the market. Trading volumes provide a window into <strong>collective participation and attention</strong>, signaling whether investors react in a coordinated way. By tracking how correlations in these features evolve before and during crises, we aim to detect early signs of tightening market linkages—patterns that suggest not <strong>where</strong> prices will go, but <strong>how</strong> the market structure itself changes as a crisis unfolds.</p>
   <p>Crisis 1: Black Monday – Stock Market Investigation</p>
-  <p>Here display interactive heatmap labelled “interactive_correlation_black_monday_stocks”</p>
   
-  <div class="side-by-side" data-aos="fade-up">
-    <div class="chart-container">
-      <img src="assets/images/analysis_corr_black_monday_rets_pre.png" alt="Correlations Pre-Black Monday">
-    </div>
-    <div class="chart-container">
-      <img src="assets/images/analysis_corr_black_monday_rets_during.png" alt="Correlations During Black Monday">
-    </div>
+  <div class="chart-container wide-chart" data-aos="zoom-in">
+    <iframe src="assets/charts/interactive_correlation_black_monday_stocks.html" class="plotly-chart"></iframe>
   </div>
 
   <p>In the period surrounding Black Monday, stock-level correlations show a clear asymmetry across features. Log returns and trading volumes exhibit relatively low and dispersed correlations for most of the pre-crisis window, suggesting that stocks still retain a meaningful degree of independence. In contrast, correlations in volatility are consistently high, with pronounced peaks during the crisis itself. Most interestingly, we observe a <strong>gradual increase in correlation</strong> in both log returns and volatility in the months leading up to the crash. This points to a slow buildup of common risk, where uncertainty begins to affect many stocks simultaneously even before prices fully synchronize. Given the sudden nature of the 1987 crash, this pattern suggests that stress may have been accumulating beneath the surface, becoming visible first through volatility rather than through prices themselves.</p>
@@ -394,7 +388,6 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>For the Dot-com episode, trading volumes appear largely uninformative: volume correlations remain low and scattered throughout the entire window, offering little evidence of coordinated trading behavior across stocks. Log-return correlations increase modestly in the years preceding the crash, but remain overall low, indicating that price movements were still largely stock-specific. This aligns well with the nature of the dot-com bubble, which was driven by highly heterogeneous firm-level narratives rather than broad macroeconomic forces.</p>
   <p>Volatility correlations display a fragmented structure, with many weak or even negative relationships across stocks. While correlations rise somewhat before the crisis, they <strong>decrease during the bubble burst itself</strong>, suggesting that risk was unevenly distributed and that the collapse unfolded in a more sector- and firm-specific manner than in later systemic crises.</p>
   <p>Crisis 2: Dot Com Bubble – ETF Market Investigation</p>
-  <p>Here display interactive heatmap labelled “interactive_correlation_dot_com_etfs”</p>
 
   <div class="chart-container wide-chart" data-aos="zoom-in">
     <iframe src="assets/charts/interactive_correlation_dotcom_burst_etfs.html" class="plotly-chart"></iframe>
@@ -402,20 +395,13 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
 
   <p>The ETF market tells a very different story during the dot-com period. Volume correlations remain weak and sparse, reinforcing the idea that volume may not be the most informative feature for detecting early-warning signals. In contrast, correlations of log returns and especially of volatility are <strong>consistently high across all windows</strong>, with striking peaks immediately before the crisis. This is likely due to the aggregated nature of ETFs: because they bundle multiple assets, they naturally respond more uniformly to market-wide sentiment. The unusually high volatility correlations right before the crash suggest that ETFs may amplify signals of systemic uncertainty earlier than individual stocks, reflecting their growing role as instruments for broad market exposure during that period.</p>
   <p>Crisis 3: Great Financial Crisis – Stock Market Investigation</p>
-  <p>Here display interactive heatmap labelled “interactive_correlation_financial_crisis_stocks”</p>
 
-  <div class="side-by-side" data-aos="fade-up">
-    <div class="chart-container">
-      <img src="assets/images/analysis_corr_gfc_rets_pre.png" alt="Correlations Pre-GFC">
-    </div>
-    <div class="chart-container">
-      <img src="assets/images/analysis_corr_gfc_rets_during.png" alt="Correlations During GFC">
-    </div>
+  <div class="chart-container wide-chart" data-aos="zoom-in">
+    <iframe src="assets/charts/interactive_correlation_financial_crisis_stocks.html" class="plotly-chart"></iframe>
   </div>
 
   <p>During the Global Financial Crisis, a clear and progressive pattern emerges. Volume correlations increase steadily over time, though they remain relatively sparse overall, indicating growing—but uneven—coordination in trading activity. More importantly, both log-return correlations and volatility correlations show a <strong>persistent upward trend</strong> throughout the pre-crisis window, with volatility correlations clearly dominating. This suggests that uncertainty becomes increasingly synchronized across stocks well before the crisis officially unfolds. Unlike earlier episodes, the GFC exhibits a strong systemic buildup, consistent with the widespread interconnectedness of financial institutions and balance sheets. The dominance of volatility correlations reinforces the idea that <strong>shared risk perceptions</strong> may be one of the earliest detectable signals of a coming crisis.</p>
   <p>Crisis 3: Great Financial Crisis – ETF Market Investigation</p>
-  <p>Here display interactive heatmap labelled “interactive_correlation_financial_crisis_etfs”</p>
 
   <div class="chart-container wide-chart" data-aos="zoom-in">
     <iframe src="assets/charts/interactive_correlation_financial_crisis_etfs.html" class="plotly-chart"></iframe>
@@ -435,30 +421,34 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
     <img src="assets/images/analysis_pca_gfc.png" alt="Global Financial Crisis PCA">
   </div>
 
-  <p>Across all three crises, a clear and consistent pattern emerges when comparing the periods before and during the crisis. In the pre-crisis phases, market movements are influenced by several different forces: although the first principal component already explains a meaningful share of variability, higher-order components still play an important role, reflecting a certain degree of diversification and heterogeneous behavior across assets. As markets enter crisis conditions, this structure changes markedly. The explanatory power of the first principal component increases sharply—most notably during the Global Financial Crisis—while the contribution of subsequent components diminishes. This indicates a collapse in diversification, with asset movements increasingly driven by a single, dominant market-wide force. The strength of this effect varies across events. It is relatively mild for Black Monday, more pronounced for the Dot-com bubble, and strongest for the Global Financial Crisis, consistent with the deep systemic interconnectedness that characterized the latter. Overall, the PCA results reinforce the message already suggested by correlations: during financial crises, markets tend to move as one, and asset-specific dynamics are largely overwhelmed by common shocks.</p>
+  <p>Across all three crises, a clear and consistent pattern emerges when comparing the periods before and during the crisis. In the pre-crisis phases, market movements are influenced by several different forces: although the first principal component already explains a meaningful share of variability, higher-order components still play an important role, reflecting a certain degree of diversification and heterogeneous behavior across assets.</p>
+  <p>As markets enter crisis conditions, this structure changes markedly. The explanatory power of the first principal component increases sharply—most notably during the Global Financial Crisis—while the contribution of subsequent components diminishes. This indicates a collapse in diversification, with asset movements increasingly driven by a single, dominant market-wide force.</p>
+  <p>The strength of this effect varies across events. It is relatively mild for Black Monday, more pronounced for the Dot-com bubble, and strongest for the Global Financial Crisis, consistent with the deep systemic interconnectedness that characterized the latter. Overall, the PCA results reinforce the message already suggested by correlations: during financial crises, markets tend to move as one, and asset-specific dynamics are largely overwhelmed by common shocks.</p>
   <p>PCA Analysis: ETF Market Investigation</p>
-  <p>Across both crises, a clear and consistent pattern emerges when comparing market behavior before and during the crisis. In the period leading up to the <strong>Dot-com Bubble</strong>, market variability is spread across several underlying forces. Although the first principal component already captures a significant share of overall variation, multiple components are still needed to explain most of the market’s behavior, indicating that assets retain a degree of independent movement. Once the crisis begins, this structure changes sharply: variance becomes much more concentrated, with the first component alone explaining a substantially larger share. This reflects a shift toward more synchronized asset movements and heightened systemic behavior. An even stronger version of this pattern appears during the <strong>Global Financial Crisis</strong>. Already in the pre-crisis phase, the first component explains a large fraction of variance, pointing to a highly integrated market. During the crisis, this concentration intensifies further, with the first principal component overwhelmingly dominating the variance structure and leaving little room for asset-specific dynamics. In practical terms, diversification becomes far less effective as market-wide shocks overpower individual asset behavior. Overall, these PCA results reinforce a central insight of crisis dynamics: financial stress is accompanied by a <strong>collapse of dimensionality</strong>. As crises unfold, markets move from being driven by multiple factors to being dominated by a single systemic force, causing correlations to rise and diversification benefits to shrink precisely when they are most needed.</p>
+  <div class="chart-container" data-aos="zoom-in">
+    <img src="assets/images/analysis_pca_etf_dotcom_burst.png" alt="Dot-Com Bubble Burst PCA">
+  </div>
+  <div class="chart-container" data-aos="zoom-in">
+    <img src="assets/images/analysis_pca_etf_gfc.png" alt="Global Financial Crisis PCA">
+  </div>
+  <p>Across both crises, a clear and consistent pattern emerges when comparing market behavior before and during the crisis. In the period leading up to the <strong>Dot-com Bubble</strong>, market variability is spread across several underlying forces. Although the first principal component already captures a significant share of overall variation, multiple components are still needed to explain most of the market’s behavior, indicating that assets retain a degree of independent movement. Once the crisis begins, this structure changes sharply: variance becomes much more concentrated, with the first component alone explaining a substantially larger share. This reflects a shift toward more synchronized asset movements and heightened systemic behavior.</p>
+  <p>An even stronger version of this pattern appears during the <strong>Global Financial Crisis</strong>. Already in the pre-crisis phase, the first component explains a large fraction of variance, pointing to a highly integrated market. During the crisis, this concentration intensifies further, with the first principal component overwhelmingly dominating the variance structure and leaving little room for asset-specific dynamics. In practical terms, diversification becomes far less effective as market-wide shocks overpower individual asset behavior.</p> 
+  <p>Overall, these PCA results reinforce a central insight of crisis dynamics: financial stress is accompanied by a <strong>collapse of dimensionality</strong>. As crises unfold, markets move from being driven by multiple factors to being dominated by a single systemic force, causing correlations to rise and diversification benefits to shrink precisely when they are most needed.</p>
   <p>Research Question 2</p>
   <p>To address <strong>Research Question 2</strong>, we adopt an approach that closely mirrors the one used for the market-wide analysis, but we shift the focus from individual assets to <strong>industries</strong>. The idea is to understand whether crises build up uniformly across the economy or whether certain sectors begin to move differently—and potentially signal stress—earlier than others. Concretely, we aggregate asset-level features at the industry level and study how industries co-move over time. By using <strong>dynamic heatmaps</strong>, we can track how correlations between industries evolve as a crisis approaches and unfolds. This allows us to observe whether sectors become increasingly synchronized, whether specific industries emerge as leaders of stress, or whether sectoral differences persist until late in the crisis. In this way, the industry-level analysis provides a more structured and economically meaningful view of how market stress propagates across the real economy.</p>
   <p>Crisis 1: Black Monday – Industry Investigation</p>
-  <p>Here, display interactive heatmap labelled “interactive_correlation_black_monday_industries”</p>
-
   <div class="chart-container wide-chart" data-aos="zoom-in">
     <iframe src="assets/charts/interactive_correlation_black_monday_industries.html" class="plotly-chart" style="height: 750px;"></iframe>
   </div>
 
   <p>At the industry level, Black Monday appears as an overwhelmingly systemic event. During the crisis, all industries display high correlations across features, indicating that sector-specific distinctions largely disappear. Even in the pre-crisis window, industries are already highly correlated for most variables, suggesting limited diversification benefits across sectors. A notable spike in correlations for both log returns and volatility occurs during the crash itself. Interestingly, volatility correlations become more sparse just before the crisis, possibly reflecting uneven risk buildup across sectors before the sudden market-wide shock materializes.</p>
   <p>Crisis 2: Dot Com Bubble – Industry Investigation</p>
-  <p>Here, display interactive heatmap labelled “interactive_correlation_dotcom_burst_industries”</p>
-
   <div class="chart-container wide-chart" data-aos="zoom-in">
     <iframe src="assets/charts/interactive_correlation_dotcom_burst_industries.html" class="plotly-chart" style="height: 750px;"></iframe>
   </div>
 
   <p>The industry-level picture for the dot-com bubble is markedly different. Overall, correlations across industries <strong>decrease</strong> for all three features—log returns, volatility, and volumes—both before and during the crisis. Log returns and volatility dominate the correlation structure, but correlations remain moderate and non-persistent. Surprisingly, even the Information Technology sector does not exhibit particularly strong or stable correlations with other industries, reinforcing the idea that the bubble was driven by <strong>firm-specific narratives rather than broad sectoral or macro forces</strong>. This fragmentation helps explain why early-warning signals were harder to detect during this episode.</p>
   <p>Crisis 3: Great Financial Crisis – Industry Investigation</p>
-  <p>Here, display interactive heatmap labelled “interactive_correlation_gfc_industries”</p>
-
   <div class="chart-container wide-chart" data-aos="zoom-in">
     <iframe src="assets/charts/interactive_correlation_gfc_industries.html" class="plotly-chart" style="height: 750px;"></iframe>
   </div>
