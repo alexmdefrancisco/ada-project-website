@@ -309,7 +309,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <div class="chart-container" data-aos="zoom-in">
     <iframe src="assets/charts/eda_market_breadth_stock.html" class="plotly-chart"></iframe>
   </div>
-    <div class="chart-container" data-aos="zoom-in">
+  <div class="chart-container" data-aos="zoom-in">
     <iframe src="assets/charts/eda_market_breadth_etfs.html" class="plotly-chart"></iframe>
   </div>
 
@@ -332,10 +332,10 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>Another classic theme in financial markets is <strong>seasonality</strong>. Just like people have routines, markets often exhibit cyclical patterns: some days of the week may be more volatile, some months may show stronger returns, and some periods — like the beginning or end of a cycle — tend to attract more trading activity.To test whether these patterns hold in our dataset, we examine how market returns behave across days of the week and across months.</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_dow_effect_violinbox.png" alt="Seasonality in Market Log-Returns (DOW)">
+    <img src="assets/images/eda_stock_seasonality.png" alt="Stock Market - Seasonality in Market Log Returns">
   </div>
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_stock_seasonality.png" alt="Average Market Log Return by Month of Year">
+    <img src="assets/images/eda_etf_seasonality.png" alt="ETF Market - Seasonality in Market Log Returns">
   </div>
 
   <p>The first row of the subplot compares the distribution of daily returns across weekdays (left) with the volatility of absolute log-returns (right).</p>
@@ -354,7 +354,10 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>As a final check, we examine how returns behave around the <strong>end-of-month boundary</strong>, where liquidity and rebalancing decisions often kick in.</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_stock_tom_effect.png" alt="Turn-of-Month Avg Log Return">
+    <iframe src="assets/charts/eda_stock_tom_effect.html" class="plotly-chart"></iframe>
+  </div>
+  <div class="chart-container" data-aos="zoom-in">
+    <iframe src="assets/charts/eda_etf_tom_effect.html" class="plotly-chart"></iframe>
   </div>
 
   <p>These plots suggest a clear <strong>turn-of-the-month effect</strong> in both the stock and ETF markets.</p>
@@ -365,8 +368,6 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>Taken together, these cross-sectional findings paint a richer portrait of how markets behave when observed from above.</p>
   <p>We see bursts of volatility, persistent clustering, unpredictable swings in breadth, meaningful drawdowns, and subtle seasonal rhythms — all of which help set the stage for understanding what happens when crises unfold.</p>
   <p>And as we’ll discover next, zooming further into industries reveals even more layers to the story.</p>
-  <p>------------------------ End of Cross-Sectional Market Oriented Analysis: (tentative) video with Sora of Ryan Gosling recapping what discussed so far.</p>
-  <p>Crucial for Data Story (i.e., website) --------------------------------</p>
 </div>
 
 <div class="container" data-aos="fade-up">
@@ -389,7 +390,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>A distributional comparison helps reveal which industries carry larger day-to-day movements and which tend to fluctuate less dramatically.</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_log_return_histogram.png" alt="Distribution of Log Returns by Sector">
+    <img src="assets/images/eda_stock_returns_by_sector.png" alt="Distribution of Log Returns by Sector">
   </div>
 
   <p>Across sectors, log returns are tightly centered around zero, confirming that <strong>large daily moves are rare</strong> and that most sectors behave similarly on average.</p>
@@ -400,7 +401,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>Understanding volume behaviour helps identify which parts of the market drive liquidity and which remain relatively quiet.</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_volume_histogram.png" alt="Distribution of Volume by Sector">
+    <img src="assets/images/eda_stock_volume_by_sector.png" alt="Distribution of Volume by Sector">
   </div>
 
   <p>Trading volumes vary much more across sectors than returns. <strong>Information Technology, Financials, and Consumer Discretionary</strong> show higher and more dispersed volumes, reflecting stronger trading activity and investor attention, while <strong>Utilities and Real Estate</strong> appear more concentrated, consistent with their more defensive and less frequently traded nature.</p>
@@ -411,7 +412,10 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>[Here, display a 2×1 subplot: top = boxplots of industry returns; bottom = boxplots of industry volumes.]</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_industry_boxplots.png" alt="Distributions of Log Returns and Volume by Industry (boxplots)">
+    <img src="assets/images/eda_stock_returns_boxplot_by_sector.png" alt="Distributions of Log Returns by Industry (boxplots)">
+  </div>
+  <div class="chart-container" data-aos="zoom-in">
+    <img src="assets/images/eda_stock_volume_boxplot_by_sector.png" alt="Distributions of Volume by Industry (boxplots)">
   </div>
 
   <p>The boxplots of log returns by sector indicate that median returns are broadly similar across industries and tend to cluster around zero.</p>
