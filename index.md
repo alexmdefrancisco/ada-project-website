@@ -136,6 +136,17 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <div class="chart-container" data-aos="zoom-in">
       <img src="assets/images/illustration_dataset_tables.png" alt="The Dataset Delivered From Above">
   </div>
+
+  <div data-aos="fade-up">
+  <!-- <h3>Stock Market Aggregated Data (Tail)</h3> -->
+  <div class="table-wrapper">
+    {% include tables/prices_clean_stock.html %}
+  </div>
+  <!-- <h3>ETF Market Aggregated Data (Tail)</h3> -->
+  <div class="table-wrapper">
+    {% include tables/prices_clean_etfs.html %}
+  </div>
+  </div>
   
   <p>These tables show a snapshot of the raw datasets we start from for our analysis, one for individual stocks and one for ETFs.</p>
   <p>Each row corresponds to a single traded asset on a given trading day, identified by its <strong>Date</strong> and <strong>Ticker</strong>.</p>
@@ -151,7 +162,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>So a natural first step is to check whether our dataset matches the real-world trading calendar or whether it’s missing days like your friend who keeps skipping gym sessions but insists they’re “still committed.”</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_calendar_heatmap_stock_etfs.png" alt="Trading Days per Month">
+    <iframe src="assets/charts/eda_calendar_heatmap_stock_etfs.html" class="plotly-chart"></iframe>
   </div>
 
   <p>This heatmap confirms that the datasets are largely complete and internally consistent with how financial markets operate.</p>
@@ -166,7 +177,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>You meet Apple, Amazon, Microsoft, Tesla… each with its own personality and its own dramatic arcs (and in Tesla’s case, its own main character energy).</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/compare_stock_etf_evolution.png" alt="Evolution of Major US Stocks vs ETFs">
+    <iframe src="assets/charts/compare_stock_etf_evolution.html" class="plotly-chart"></iframe>
   </div>
 
   <p>Overall, these preliminary visualizations help us understand how financial assets behave over time, but they also highlight a key limitation: even when long-term upward trends are visible, they do <strong>not</strong> guarantee profits.</p>
@@ -187,7 +198,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>Markets, it turns out, have moods.</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_AAPL_log_returns.png" alt="Simple vs Log Returns">
+    <iframe src="assets/charts/comparison_return_log_return.html" class="plotly-chart"></iframe>
   </div>
 
   <p>These plots highlight two key stylized facts of financial markets.</p>
@@ -225,8 +236,6 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>This early exploration sets the tone for everything that follows.</p>
   <p>Before tackling the main research questions, it’s essential to understand the raw material we’re working with.</p>
   <p>And now that we’ve peeled back the first layer, it’s time to dive deeper into the story that markets tell us before crises hit.</p>
-  <p>------------------------ End of Introductory General Analysis: (tentative) video with Sora of Ryan Gosling recapping what discussed so far.</p>
-  <p>Crucial for Data Story (i.e., website) ------------------------------------------</p>
 </div>
 
 <div class="container" data-aos="fade-up">
