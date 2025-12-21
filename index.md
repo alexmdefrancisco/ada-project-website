@@ -409,45 +409,34 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>Histograms are a helpful first step, but they don’t show medians, outliers, or intra-industry dispersion.</p>
   <p>To uncover these details, we turn to <strong>boxplots</strong> of returns and volumes.</p>
   <p>These visualizations help us compare industry risk profiles, identify asymmetric behaviour, and observe the presence of extreme events.</p>
-  <p>[Here, display a 2×1 subplot: top = boxplots of industry returns; bottom = boxplots of industry volumes.]</p>
 
-  <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_stock_returns_boxplot_by_sector.png" alt="Distributions of Log Returns by Industry (boxplots)">
-  </div>
-  <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_stock_volume_boxplot_by_sector.png" alt="Distributions of Volume by Industry (boxplots)">
-  </div>
-
-  <p>The boxplots of log returns by sector indicate that median returns are broadly similar across industries and tend to cluster around zero.</p>
-  <p>What clearly differs is the dispersion of returns. More cyclical sectors such as Energy, Materials, and Consumer Discretionary display wider interquartile ranges and longer tails, signalling higher risk and a greater frequency of extreme outcomes.</p>
-  <p>By contrast, defensive sectors like Utilities, Consumer Staples, and Health Care show tighter distributions, consistent with more stable return dynamics.</p>
-  <p>The boxplots of trading volumes by sector reveal much stronger heterogeneity.</p>
-  <p>Sectors such as Information Technology, Financials, and Energy exhibit higher median volumes and greater dispersion, reflecting more intense and uneven trading activity.</p>
-  <p>Defensive sectors generally show lower and more concentrated volume distributions.</p>
-  <p>Overall, these figures highlight that while average returns are broadly comparable across sectors, risk and liquidity characteristics differ substantially, which is particularly relevant when studying market structure and behavior around crises.</p>
-  <p>Finally, industries rarely move in isolation. When uncertainty rises, sectors often become more correlated; when conditions stabilize, they decouple.</p>
-  <p>Looking at <strong>correlation matrices</strong> gives us insight into how industries interact under normal conditions and provides intuition for what may happen as we approach a crisis.</p>
-
-  <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/analysis_corr_industry.png" alt="Correlation of LogReturn across industries">
+  <div class="side-by-side" data-aos="fade-up">
+    <div class="chart-container" data-aos="zoom-in">
+      <img src="assets/images/eda_stock_returns_boxplot_by_sector.png" alt="Distributions of Log Returns by Industry (boxplots)">
+    </div>
+    
+    <div class="chart-container" data-aos="zoom-in">
+      <img src="assets/images/eda_stock_volume_boxplot_by_sector.png" alt="Distributions of Volume by Industry (boxplots)">
+    </div>
   </div>
 
-  <p>The heatmap shows that industry-level log returns are strongly and positively correlated, indicating that sectors generally move together rather than independently.</p>
-  <p>Cyclical industries such as Financials, Industrials, Consumer Discretionary, and Information Technology exhibit especially high mutual correlations, reflecting their shared exposure to common macroeconomic and market-wide forces.</p>
-  <p>In contrast, Utilities display noticeably lower correlations with most other sectors, consistent with their more defensive nature and relatively stable cash-flow profiles.</p>
-  <p>Overall, this pattern suggests that sector diversification provides only limited risk reduction, particularly during periods of market stress when correlations tend to rise—an insight that becomes especially important in the crisis-oriented analysis.</p>
-  <p>Taken together, this industry-level perspective gives us a more complete picture of market structure.</p>
-  <p>It allows us to see which sectors amplify volatility, which absorb shocks, and how information spreads across the market.</p>
+  <p>The boxplots of log returns by sector indicate that median returns are broadly similar across industries and tend to cluster around zero. What clearly differs is the dispersion of returns. More cyclical sectors such as Energy, Materials, and Consumer Discretionary display wider interquartile ranges and longer tails, signalling higher risk and a greater frequency of extreme outcomes. By contrast, defensive sectors like Utilities, Consumer Staples, and Health Care show tighter distributions, consistent with more stable return dynamics.</p>
+  <p>The boxplots of trading volumes by sector reveal much stronger heterogeneity. Sectors such as Information Technology, Financials, and Energy exhibit higher median volumes and greater dispersion, reflecting more intense and uneven trading activity. Defensive sectors generally show lower and more concentrated volume distributions. Overall, these figures highlight that while average returns are broadly comparable across sectors, risk and liquidity characteristics differ substantially, which is particularly relevant when studying market structure and behavior around crises.</p>
+  <p>Finally, industries rarely move in isolation. When uncertainty rises, sectors often become more correlated; when conditions stabilize, they decouple. Looking at <strong>correlation matrices</strong> gives us insight into how industries interact under normal conditions and provides intuition for what may happen as we approach a crisis.</p>
+
+  <div class="chart-container" data-aos="zoom-in">
+    <img src="assets/images/eda_stock_sector_correlation_heatmap.png" alt="Correlation of LogReturn across industries">
+  </div>
+
+  <p>The heatmap shows that industry-level log returns are strongly and positively correlated, indicating that sectors generally move together rather than independently. Cyclical industries such as Financials, Industrials, Consumer Discretionary, and Information Technology exhibit especially high mutual correlations, reflecting their shared exposure to common macroeconomic and market-wide forces.</p>
+  <p>In contrast, Utilities display noticeably lower correlations with most other sectors, consistent with their more defensive nature and relatively stable cash-flow profiles. Overall, this pattern suggests that sector diversification provides only limited risk reduction, particularly during periods of market stress when correlations tend to rise—an insight that becomes especially important in the crisis-oriented analysis.</p>
+  <p>Taken together, this industry-level perspective gives us a more complete picture of market structure. It allows us to see which sectors amplify volatility, which absorb shocks, and how information spreads across the market.</p>
   <p>This broader understanding becomes crucial when we turn to our main goal: identifying whether industries — and therefore the market — exhibit warning signs in the years leading up to major financial crises.</p>
-  <p>------------------------ End of Industry-Oriented Analysis: (tentative) video with Sora of Ryan Gosling recapping what was discussed so far.</p>
-  <p>Crucial for Data Story (i.e., website) ------------------------------------</p>
 </div>
 
 <div class="container" data-aos="fade-up">
   <h3>Crisis-Oriented Analysis</h3>
-  <p>We now enter the most important part of our project — the section where everything we have built so far finally converges.</p>
-  <p>Until now, we explored how individual stocks move, how markets behave in aggregate, and how industries interact.</p>
-  <p>With that foundation, we are ready to confront the key question that inspired this entire analysis: <strong>do financial crises come out of nowhere, or does the market whisper its warnings before it screams?</strong></p>
+  <p>We now enter the most important part of our project — the section where everything we have built so far finally converges. Until now, we explored how individual stocks move, how markets behave in aggregate, and how industries interact. With that foundation, we are ready to confront the key question that inspired this entire analysis: <strong>do financial crises come out of nowhere, or does the market whisper its warnings before it screams?</strong></p>
   
   <div class="chart-container" data-aos="zoom-in">
       <img src="assets/images/poster_crises_trio.png" alt="Crisis Posters">
@@ -467,8 +456,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>Black Monday (1987 Crash)</p>
   <p>Pre-crisis window : 1985/10/19 – 1987/10/19</p>
   <p>Crisis window : 1987/10/19 – 1988/10/19</p>
-  <p>Black Monday marks one of the most dramatic single-day collapses ever recorded: on October 19, 1987, the Dow Jones fell <strong>22.6% in a single trading session</strong> — a number that would cause even seasoned traders to spill their coffee.</p>
-  <p>The event remains puzzling because it seemed to come “out of thin air,” with explanations ranging from automated trading mechanisms to liquidity shortages and inflation fears.Its suddenness makes it a perfect candidate for asking whether subtle warning signs existed beforehand.</p>
+  <p>Black Monday marks one of the most dramatic single-day collapses ever recorded: on October 19, 1987, the Dow Jones fell <strong>22.6% in a single trading session</strong> — a number that would cause even seasoned traders to spill their coffee. The event remains puzzling because it seemed to come “out of thin air,” with explanations ranging from automated trading mechanisms to liquidity shortages and inflation fears.Its suddenness makes it a perfect candidate for asking whether subtle warning signs existed beforehand.</p>
   
   <div class="chart-container" data-aos="zoom-in">
       <img src="assets/images/illustration_black_monday.png" alt="Black Monday Illustration">
