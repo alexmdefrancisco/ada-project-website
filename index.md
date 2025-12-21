@@ -5,7 +5,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
 
 <div class="section-block hero-section">
   <div class="content-container" data-aos="fade-up" data-aos-duration="1000">
-    <h1>HOME</h1>
+    <h1>THE BIG SHOT</h1>
     
     <div class="grid-2-col">
       <div class="meme-container" data-aos="zoom-in">
