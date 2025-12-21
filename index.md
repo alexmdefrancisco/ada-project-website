@@ -384,13 +384,8 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
     <p>Most interestingly, we observe a <strong>gradual increase in correlation</strong> in both log returns and volatility in the months leading up to the crash. This points to a slow buildup of common risk, where uncertainty begins to affect many stocks simultaneously even before prices fully synchronize. Given the sudden nature of the 1987 crash, this pattern suggests that stress may have been accumulating beneath the surface, becoming visible first through volatility rather than through prices themselves.</p>
     
     <h5 class="minor-title">Crisis 2: Dot Com Bubble – Stock Market Investigation</h5>
-    <div class="grid-2-col" data-aos="fade-up">
-      <div class="chart-container" style="margin:0;">
-        <img src="assets/images/analysis_corr_dotcom_burst_rets_pre.png" alt="Correlations Pre-DotCom">
-      </div>
-      <div class="chart-container" style="margin:0;">
-        <img src="assets/images/analysis_corr_dotcom_burst_rets_during.png" alt="Correlations During DotCom">
-      </div>
+    <div class="chart-container wide-chart" data-aos="zoom-in">
+      <iframe src="assets/charts/interactive_correlation_dot_com_stocks.html" class="plotly-chart"></iframe>
     </div>
     <p>For the Dot-com episode, trading volumes appear largely uninformative: volume correlations remain low and scattered throughout the entire window, offering little evidence of coordinated trading behavior across stocks.</p>
     <p>Log-return correlations increase modestly in the years preceding the crash, but remain overall low, indicating that price movements were still largely stock-specific. This aligns well with the nature of the dot-com bubble, which was driven by highly heterogeneous firm-level narratives rather than broad macroeconomic forces.</p>
