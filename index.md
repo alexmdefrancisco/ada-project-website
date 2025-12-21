@@ -138,14 +138,22 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   </div>
 
   <div data-aos="fade-up">
-  <!-- <h3>Stock Market Aggregated Data (Tail)</h3> -->
-  <div class="table-wrapper">
-    {% include tables/prices_clean_stock.html %}
-  </div>
-  <!-- <h3>ETF Market Aggregated Data (Tail)</h3> -->
-  <div class="table-wrapper">
-    {% include tables/prices_clean_etfs.html %}
-  </div>
+    <h3>Clean Stock prices (Head)</h3>
+    <div class="table-wrapper">
+      {% include tables/prices_clean_stock.html %}
+    </div>
+    <h3>Clean ETFs prices (Head)</h3>
+    <div class="table-wrapper">
+      {% include tables/prices_clean_etfs.html %}
+    </div>
+   
+     <!-- <div class="feature-explanation">
+      <p><strong>Feature Interpretation:</strong></p>
+      <ul>
+        <li><strong>Log Return:</strong> The aggregated daily log-return of the market...</li>
+        <li><strong>Volatility:</strong> A rolling measure of standard deviation...</li>
+      </ul>
+    </div> -->
   </div>
   
   <p>These tables show a snapshot of the raw datasets we start from for our analysis, one for individual stocks and one for ETFs.</p>
@@ -257,7 +265,26 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>Do this for every feature, repeat the procedure for both stocks and ETFs, and voilà: we transform a chaotic universe of tickers into a pair of tidy, time-indexed dataframes.</p>
   <p>Think of it as blending a thousand ingredients into two smooth smoothies — one stock-flavored, one ETF-flavored.</p>
   <p>For the sake of simplicity and clarity, we show a glimpse of our two new-born dataframes below (first for the stock market, then for the ETF market).</p>
-  <p>[Here, show tail(5) for both the stock-market and ETF-market aggregated dataframes, and briefly explain the meaning and interpretation of each engineered feature.]</p>
+
+  <div data-aos="fade-up">
+    <h3>Stock Market Aggregated Data (Tail)</h3>
+    <div class="table-wrapper">
+      {% include tables/market_stock.html %}
+    </div>
+
+    <h3>ETF Market Aggregated Data (Tail)</h3>
+    <div class="table-wrapper">
+      {% include tables/market_etfs.html %}
+    </div>
+    
+    <div class="feature-explanation">
+      <p><strong>Feature Interpretation:</strong></p>
+      <ul>
+        <li><strong>Log Return:</strong> The aggregated daily log-return of the market...</li>
+        <li><strong>Volatility:</strong> A rolling measure of standard deviation...</li>
+      </ul>
+    </div>
+  </div>
   
   <p>Earlier, we introduced one of the most fascinating quirks of financial markets: <strong>volatility clustering</strong>.</p>
   <p>In human terms, markets behave like emotional teenagers: periods of calm suddenly give way to storms, and storms lead to more storms.</p>
