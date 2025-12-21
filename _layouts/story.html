@@ -17,6 +17,28 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
+
+        // Auto-resize iframes to fit content
+        window.addEventListener('load', function() {
+            var iframes = document.querySelectorAll("iframe.plotly-chart");
+            iframes.forEach(function(iframe) {
+                // Ensure the iframe has loaded before calculating height
+                iframe.onload = function() {
+                    try {
+                        // Accessing contentWindow requires same-origin (local files)
+                        var contentHeight = iframe.contentWindow.document.body.scrollHeight;
+                        // Add a small buffer to prevent scrollbars
+                        iframe.style.height = (contentHeight + 20) + 'px'; 
+                    } catch(e) {
+                        console.log("Cannot resize iframe due to cross-origin policies or load error.");
+                    }
+                };
+                // Trigger manually if already cached/loaded
+                if (iframe.contentWindow.document.readyState === 'complete') {
+                    iframe.onload();
+                }
+            });
+        });
     </script>
 
     {% include footer.html %}
