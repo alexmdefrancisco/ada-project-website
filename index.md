@@ -290,11 +290,10 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>In human terms, markets behave like emotional teenagers: periods of calm suddenly give way to storms, and storms lead to more storms.</p>
   <p>Or, stated more academically: <strong>large changes tend to be followed by large changes, and small changes tend to be followed by small changes</strong>.</p>
   <p>Understanding this can be incredibly useful — if volatility has been calm for a while, odds are something louder may be waiting just around the corner, and vice versa.</p>
-  <p>To visualize this phenomenon, we look at the <strong>autocorrelation function</strong> computed on market-level returns, on absolute returns, and on squared returns.</p>
-  <p>And this time we compute it cross-sectionally — because we’re now operating at the market level, not on individual tickers.</p>
+  <p>To visualize this phenomenon, we look at the <strong>autocorrelation function</strong> computed on market-level returns, on absolute returns, and on squared returns. And this time we compute it cross-sectionally — because we’re now operating at the market level, not on individual tickers.</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_market_acf_plots.png" alt="Autocorrelation Plots">
+    <img src="assets/images/acf_stocks_vs_etfs.png" alt="Autocorrelation Plots">
   </div>
 
   <p>These autocorrelation plots clearly illustrate another classic feature of financial data.</p>
@@ -308,7 +307,10 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>A market rally led by only three companies is like a football match where the main attacker scores all the goals — impressive, but not exactly reassuring.</p>
 
   <div class="chart-container" data-aos="zoom-in">
-    <img src="assets/images/eda_market_breadth.png" alt="Cross-Sectional Market Breadth">
+    <iframe src="assets/charts/eda_market_breadth_stock.html" class="plotly-chart"></iframe>
+  </div>
+    <div class="chart-container" data-aos="zoom-in">
+    <iframe src="assets/charts/eda_market_breadth_etfs.html" class="plotly-chart"></iframe>
   </div>
 
   <p>At first glance, the series looks like the heartbeat of someone drinking their third espresso of the morning: sharp spikes, deep dips, no smooth trend.</p>
@@ -316,17 +318,18 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
   <p>But long-run investors know better: diversification and time tend to calm the storm.</p>
   <p>Still, it is true that equity markets carry meaningful risk compared to safer assets.</p>
   <p>To quantify this risk properly, we introduce <strong>maximum drawdown</strong>, which tells us how much a market falls from its previous peak — the financial equivalent of checking how far your fitness level drops after skipping the gym for six months.</p>
-  <p>[Here, display the plot showing cumulative return and maximum drawdown, and comment on what the largest drops reveal about market risk.]</p>
   
   <div class="chart-container" data-aos="zoom-in">
     <iframe src="assets/charts/eda_stock_market_drawdown.html" class="plotly-chart"></iframe>
+  </div>
+  <div class="chart-container" data-aos="zoom-in">
+    <iframe src="assets/charts/eda_etf_market_drawdown.html" class="plotly-chart"></iframe>
   </div>
 
   <p>These plots show cumulative market returns alongside drawdowns, highlighting both long-term growth and periods of significant losses.</p>
   <p>The ETF market follows a smoother and more steadily increasing path, reflecting the stabilizing role of diversification, while the stock market appears flatter for much of the sample due to its very long historical span, changing market composition, and the impact of repeated major crises.</p>
   <p>Overall, the figures underline a key message of this project: financial markets do grow over time, but that growth is punctuated by deep and recurring downturns that investors must endure.</p>
-  <p>Another classic theme in financial markets is <strong>seasonality</strong>.</p>
-  <p>Just like people have routines, markets often exhibit cyclical patterns: some days of the week may be more volatile, some months may show stronger returns, and some periods — like the beginning or end of a cycle — tend to attract more trading activity.To test whether these patterns hold in our dataset, we examine how market returns behave across days of the week and across months.</p>
+  <p>Another classic theme in financial markets is <strong>seasonality</strong>. Just like people have routines, markets often exhibit cyclical patterns: some days of the week may be more volatile, some months may show stronger returns, and some periods — like the beginning or end of a cycle — tend to attract more trading activity.To test whether these patterns hold in our dataset, we examine how market returns behave across days of the week and across months.</p>
 
   <div class="chart-container" data-aos="zoom-in">
     <img src="assets/images/eda_dow_effect_violinbox.png" alt="Seasonality in Market Log-Returns (DOW)">
