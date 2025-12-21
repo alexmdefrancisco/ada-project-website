@@ -15,6 +15,43 @@
   /* Optional: maintain Minima's default height/look */
   min-height: 56px;
   position: relative;
+
+  /* --- Home Page Header Override --- */
+  &.home-header {
+    background-color: #f5f7fa; /* Matches the start of the Hero Gradient */
+    border-bottom: none;       /* Removes the standard separation line */
+  }
+}
+
+/* --- Footer Styling --- */
+.site-footer {
+  /* Default styles (Matches 'About' page requirement) */
+  padding: 2rem 0;
+  background-color: #fdfdfd;
+  border-top: 1px solid #e8e8e8;
+  margin-top: 4rem;
+  color: #666;
+
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+    text-align: center;
+    
+    p {
+      margin: 0;
+      text-align: center; /* Ensure copyright text is centered */
+      color: inherit;     /* Inherit color from footer parent */
+    }
+  }
+
+  /* --- Home Page Footer Override --- */
+  &.home-footer {
+    background-color: #343a40; /* Matches the .bg-dark section */
+    color: #fff;               /* White text for dark background */
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Subtle integration line */
+    margin-top: 0;             /* Removes gap so it touches the previous section */
+  }
 }
 
 /* --- 1. Layout Overrides for Full-Width Sections --- */
@@ -24,12 +61,16 @@
     padding: 0;
     margin: 0;
   }
+
+  .page-content {
+    padding: 0 !important; 
+  }
 }
 
 /* --- 2. Section Styling --- */
 .section-block {
   width: 100%;
-  padding: 4rem 0;
+  padding: 4rem 0; /* Internal spacing for content readability */
   position: relative;
   background-color: #ffffff;
   
