@@ -134,6 +134,17 @@
   margin-top: 2rem;
 }
 
+.crisis-title {
+  font-size: 1.7rem;      /* Significantly bigger than p text */
+  font-weight: 700;
+  color: #2c3e50;         /* Blends with section titles */
+  margin-top: 0;
+  margin-bottom: 1rem;
+  border-bottom: 3px solid #dc3545; /* Signature red accent */
+  display: inline-block;
+  line-height: 1.2;
+}
+
 /* Specific styling for Table Titles as requested */
 .table-title {
   font-size: 1.2rem;

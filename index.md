@@ -338,7 +338,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
     
     <div class="grid-2-col" style="align-items: flex-start;">
         <div>
-            <h5 style="margin-top:0;">Black Monday (1987 Crash)</h5>
+            <h5 class="crisis-title">Black Monday (1987 Crash)</h5>
             <p><strong>Pre-crisis window:</strong> 1985/10/19 – 1987/10/19<br>
             <strong>Crisis window:</strong> 1987/10/19 – 1988/10/19</p>
             <p>Black Monday marks one of the most dramatic single-day collapses ever recorded: on October 19, 1987, the Dow Jones fell <strong>22.6% in a single trading session</strong> — a number that would cause even seasoned traders to spill their coffee. The event remains puzzling because it seemed to come “out of thin air,” with explanations ranging from automated trading mechanisms to liquidity shortages and inflation fears.Its suddenness makes it a perfect candidate for asking whether subtle warning signs existed beforehand.</p>
@@ -353,7 +353,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
              <img src="assets/images/illustration_dotcom.png" alt="Dot-Com Bubble Illustration">
         </div>
         <div>
-            <h5 style="margin-top:0;">Dot-Com Bubble Burst (2000)</h5>
+            <h5 class="crisis-title">Dot-Com Bubble Burst (2000)</h5>
             <p><strong>Pre-crisis window:</strong> 1998/03/10 – 2000/03/10<br>
             <strong>Crisis window:</strong> 2000/03/10 – 2001/03/10</p>
             <p>The late 1990s were defined by intense speculation surrounding internet and technology companies. Stock prices soared despite many firms having questionable business models and minimal revenue — optimism was so high that some companies doubled in valuation just by adding “.com” to their names.</p>
@@ -364,7 +364,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
 
     <div class="grid-2-col" style="align-items: flex-start;">
         <div>
-            <h5 style="margin-top:0;">Global Financial Crisis (2008)</h5>
+            <h5 class="crisis-title">Global Financial Crisis (2008)</h5>
             <p><strong>Pre-crisis window:</strong> 2006/09/15 – 2008/09/15<br>
             <strong>Crisis window:</strong> 2008/09/15 – 2009/09/15</p>
             <p>The 2008 crisis began with stresses in the U.S. mortgage market before expanding into a global financial meltdown. When Lehman Brothers filed for bankruptcy on September 15, 2008 — the largest in U.S. history — panic rippled across markets. Excessive leverage, correlated defaults, and opaque derivatives created a deeply interconnected system that unravelled rapidly. Importantly, many studies suggest that structural tensions were already rising well before the crash — making 2008 the quintessential case for searching for pre-crisis signals.</p>
