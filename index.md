@@ -490,7 +490,7 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
     </div>
     
     <div data-aos="fade-up">
-      <h3>Regression Summary Table</h3>
+      <h4 class="table-title">Regression Summary Table</h4>
       <div class="table-wrapper">
         {% include tables/regression_summary_table.html %}
       </div>
