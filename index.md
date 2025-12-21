@@ -194,14 +194,6 @@ title: "Big Short: Are Investors Blind to Crisis Signals?"
       <div class="table-wrapper">
         {% include tables/market_etfs.html %}
       </div>
-      
-      <div class="feature-explanation">
-        <p><strong>Feature Interpretation:</strong></p>
-        <ul>
-          <li><strong>Log Return:</strong> The aggregated daily log-return of the market...</li>
-          <li><strong>Volatility:</strong> A rolling measure of standard deviation...</li>
-        </ul>
-      </div>
     </div>
     
     <p>Earlier, we introduced one of the most fascinating quirks of financial markets: <strong>volatility clustering</strong>. In human terms, markets behave like emotional teenagers: periods of calm suddenly give way to storms, and storms lead to more storms. Or, stated more academically: <i>large changes tend to be followed by large changes, and small changes tend to be followed by small changes</i>. Understanding this can be incredibly useful — if volatility has been calm for a while, odds are something louder may be waiting just around the corner, and vice versa.</p>
